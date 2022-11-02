@@ -42,7 +42,8 @@ module.exports = {
           },
         ],
       }),
-      new WorkboxWebpackPlugin.GenerateSW({
+      new WorkboxWebpackPlugin.InjectManifest({
+        swSrc: path.resolve(__dirname, 'src/scripts/ws.js'),
         swDest: './sw.bundle.js',
       }),
     ],

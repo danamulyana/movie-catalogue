@@ -1,12 +1,12 @@
 const UrlParser = {
   parseActiveUrlWithCombiner() {
-    const url = window.location.hash.slice(1).toLocaleLowerCase();
+    const url = window.location.hash.slice(1).toLowerCase();
     const splitedUrl = this._urlSplitter(url);
     return this._urlCombiner(splitedUrl);
   },
 
   parseActiveUrlWithoutCombiner() {
-    const url = window.location.hash.slice(1).toLocaleUpperCase();
+    const url = window.location.hash.slice(1).toLowerCase();
     return this._urlSplitter(url);
   },
 
@@ -21,8 +21,8 @@ const UrlParser = {
 
   _urlCombiner(splitedUrl) {
     return (splitedUrl.resource ? `/${splitedUrl.resource}` : '/')
-        + (splitedUrl.id ? '/:id' : '')
-        + (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
+      + (splitedUrl.id ? '/:id' : '')
+      + (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
   },
 };
 

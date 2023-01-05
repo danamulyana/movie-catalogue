@@ -8,15 +8,16 @@ class App {
     this._drawer = drawer;
     this._content = content;
 
-    this._initialAppSheell();
+    this._initialAppShell();
   }
 
-  _initialAppSheell() {
+  _initialAppShell() {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
       content: this._content,
     });
+
     // kita bisa menginisiasikan komponen lain bila ada
   }
 
